@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".MainActivity">
+
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/photo"
+            android:adjustViewBounds="true"
+            android:text="Hello World!"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <Button
+                android:id="@+id/tv_toneCurve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="ToneCurve"
+                android:textColor="#000000"
+                android:onClick="apply_toneCurve"
+                android:textSize="18sp"
+                tools:ignore="OnClick"/>
+
+        <Button
+                android:id="@+id/tv_saturation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saturation"
+                android:onClick="apply_saturation_filter"
+                android:textColor="#000000"
+                android:textSize="18sp" tools:ignore="OnClick"/>
+        <Button
+                android:id="@+id/tv_colorOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overlay"
+                android:onClick="apply_overlay_filter"
+                android:textColor="#000000"
+                android:textSize="18sp" tools:ignore="OnClick"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+        <Button
+                android:id="@+id/tv_Contrast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Contrast"
+                android:onClick="apply_contrast_filter"
+                android:textColor="#000000"
+                android:textSize="18sp" tools:ignore="OnClick"/>
+
+        <Button
+                android:id="@+id/tv_Brightness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brightness"
+                android:onClick="apply_brigtness_filter"
+                android:textColor="#000000"
+                android:textSize="18sp" tools:ignore="OnClick"/>
+        <Button
+                android:id="@+id/tv_Vignette"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vignette"
+                android:onClick="apply_vignette_filter"
+                android:textColor="#000000"
+                android:textSize="18sp" tools:ignore="OnClick"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
